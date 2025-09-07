@@ -9,6 +9,9 @@ Using Galton's dataset, we analyse how a childs height (y variable) depends on t
 We have total 928 observations from the United States. 
 
 x variable: Parents Height
+
+
+
 y variable: Childs Height
 
 
@@ -23,9 +26,6 @@ Technique: Prof. Susan Holmes
 
 
 <img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/3a375b61-fe8f-4af9-85d5-7d3cb55c984a" />
-
-
-<img width="194" height="260" alt="image" src="https://github.com/user-attachments/assets/8d79d355-8eb2-4c3c-91d4-47e91a6159b8" />
 
 
 Equation base used:  y = Bo + B1 x
