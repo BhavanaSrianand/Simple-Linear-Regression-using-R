@@ -34,7 +34,7 @@ Equation base used:  y = Bo + B1 x
 Here,
 
 
-Child's Height (y) = Bo + B1 (Parents Height)
+Child's Height (y) = Bo + B1 * Parents Height (x)
 
 
 Bo: Intercept terms (the value of y when x = 0)
