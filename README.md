@@ -1,6 +1,9 @@
 # Simple-Linear-Regression-using-R
 Using Galton's dataset, we analyse how a childs height (y variable) depends on the parents height (x variable).
 
+<img width="193" height="262" alt="image" src="https://github.com/user-attachments/assets/97190fd4-a6ca-4dea-9010-eccecf7e99dc" />
+
+
 # Dataset (Galton)
 
 We have total 928 observations from the United States. 
@@ -8,10 +11,37 @@ We have total 928 observations from the United States.
 x variable: Parents Height
 y variable: Childs Height
 
-y = Bo + B1 x
+
+Level: Basic
+
+Author: Bhavana Srianand
+
+Technique: Prof. Susan Holmes 
+
+
+# Model Setup
+
+
+<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/3a375b61-fe8f-4af9-85d5-7d3cb55c984a" />
+
+
+<img width="194" height="260" alt="image" src="https://github.com/user-attachments/assets/8d79d355-8eb2-4c3c-91d4-47e91a6159b8" />
+
+
+Equation base used:  y = Bo + B1 x
+
+
+Here,
+
+
+Child's Height (y) = Bo + B1 (Parents Height)
+
 
 Bo: Intercept terms (the value of y when x = 0)
+
+
 B1: Slope
+
 
 
 # Project Objective
@@ -81,6 +111,7 @@ cor(parent,child)
 <pre> ```r 
 #Linear Regression Model
 reslm <- lm(child~parent)
+reslm
 class(reslm)
 names(reslm)
 plot(reslm) #series of plots
@@ -98,14 +129,40 @@ plot(reslm) #series of plots
 
 <img width="1345" height="1342" alt="image" src="https://github.com/user-attachments/assets/9d408407-55d2-4a1b-a364-b294d1a94c13" />
 
+<pre> ```r 
 
+#To plot the regression line
+reslm <- lm(child ~ parent)
+plot(jitter(parent,3),jitter(child,3),pch=19,col="orange")
 
+   ``` </pre>
 
+ <img width="1345" height="1342" alt="image" src="https://github.com/user-attachments/assets/79a771e8-8e8f-40ee-b434-43c0ccbe313e" />
+
+   
+ <pre> ```r 
+lines(parent,reslm$fitted,col="blue",lwd=3)
+str(reslm)
+
+   ``` </pre>
+
+ <img width="1345" height="1342" alt="image" src="https://github.com/user-attachments/assets/7f117672-4475-4c8c-8bdc-8e17c14a6adc" />
+
+ 
+
+   
 
 # Conclusion   
 
 1. There is 45% chance that a child's height depends on the parents height
-2. 
+2. Considering all other factors constant there is 23 % chance that a child's height is independent of the parents height.
+3. A unit change in parent height changes the child's height by 0.64 ~
+
+
+
+ # Author - Bhavana Srianand
+
+ Thank you very much for visiting my page. Looking forward to publishing more such projects!
 
 
 
